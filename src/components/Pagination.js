@@ -34,7 +34,7 @@ const Pagination = ({ pageContext }) => {
       </Box>
 
       <Box sx={{ variant: `menus.prevNextLinks` }}>
-        {humanPageNumber < limit ? (
+        {humanPageNumber <= limit ? (
           <Link to={nextPagePath}>Next Posts</Link>
         ) : (
           <Box sx={{ color: `mutted` }}>Next Posts</Box>
