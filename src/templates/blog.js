@@ -1,55 +1,57 @@
 /** @jsx jsx */
 import { jsx, Container, Box, Flex } from "theme-ui"
-// import Layout from "../components/Layout"
+import Layout from "../components/Layout"
 import { graphql, Link } from "gatsby"
-// import Pagination from "../components/Pagination"
+import Pagination from "../components/Pagination"
 import BgImage from "../components/BgImage"
 
 const Blog = ({ data, pageContext }) => {
-  const posts = data.allContentfulPost.nodes
-  // const { pageNumber, hasNextPage, itemsPerPage, allPosts } = pageContext
+  const posts = data.allWpPost.nodes
+  const { pageNumber, hasNextPage, itemsPerPage, allPosts } = pageContext
   return (
-    <Container sx={{ maxWidth: `l` }}>
-      {data &&
-        data.allWpPost &&
-        posts.map(post => (
-          <article key={post.id}>
-            <Link to={`/${post.slug}`}>
-              <Box>
-                <BgImage img={post.featuredImage} height="400px" />
-              </Box>
-            </Link>
-            <Box sx={{ variant: `card.default`, mb: 8 }}>
-              <h2>
-                <Link
-                  to={`/${post.slug}`}
-                  dangerouslySetInnerHTML={{ __html: post.title }}
-                  sx={{ color: `text`, "&:hover": { color: `primary` } }}
+    <Layout>
+      <Container sx={{ maxWidth: `l` }}>
+        {data &&
+          data.allWpPost &&
+          posts.map(post => (
+            <article key={post.id}>
+              <Link to={`/${post.uri}`}>
+                <Box>
+                  <BgImage img={post.featuredImage} height="400px" />
+                </Box>
+              </Link>
+              <Box sx={{ variant: `card.default`, mb: 8 }}>
+                <h2>
+                  <Link
+                    to={`/${post.uri}`}
+                    dangerouslySetInnerHTML={{ __html: post.title }}
+                    sx={{ color: `text`, "&:hover": { color: `primary` } }}
+                  />
+                </h2>
+                <Box
+                  className="content"
+                  dangerouslySetInnerHTML={{ __html: post.excerpt }}
                 />
-              </h2>
-              <Box
-                className="content"
-                dangerouslySetInnerHTML={{ __html: post.excerpt }}
-              />
-              <Flex
-                sx={{
-                  justifyContent: [`center`, `flex-end`],
-                  mt: 7,
-                  mr: [0, 10],
-                }}
-              >
-                <Link
-                  to={`/${post.slug}`}
-                  sx={{ variant: `buttons.secondary` }}
+                <Flex
+                  sx={{
+                    justifyContent: [`center`, `flex-end`],
+                    mt: 7,
+                    mr: [0, 10],
+                  }}
                 >
-                  Read More
-                </Link>
-              </Flex>
-            </Box>
-          </article>
-        ))}
-      {/* <Pagination pageContext={pageContext} /> */}
-    </Container>
+                  <Link
+                    to={`/${post.uri}`}
+                    sx={{ variant: `buttons.secondary` }}
+                  >
+                    Read More
+                  </Link>
+                </Flex>
+              </Box>
+            </article>
+          ))}
+        <Pagination pageContext={pageContext} />
+      </Container>
+    </Layout>
   )
 }
 

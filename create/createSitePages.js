@@ -7,7 +7,7 @@ module.exports = async ({ actions, graphql }) => {
     allWpPage {
       nodes {
         title
-        slug
+        uri
       }
     }
     }
@@ -21,10 +21,10 @@ module.exports = async ({ actions, graphql }) => {
 
   pages.map(page => {
     createPage({
-      path: `/${page.slug}`,
+      path: `/${page.uri}`,
       component: pageTemplate,
       context: {
-        slug: page.slug,
+        uri: page.uri,
       },
     })
   })

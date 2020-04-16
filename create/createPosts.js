@@ -9,7 +9,7 @@ module.exports = async ({ actions, graphql }) => {
         allWpPost(limit: $limit) {
         nodes {
           title
-          slug
+          uri
         }
       }
       }
@@ -23,10 +23,10 @@ module.exports = async ({ actions, graphql }) => {
 
   posts.map(post => {
     createPage({
-      path: `/${post.slug}`,
+      path: `/${post.uri}`,
       component: postTemplate,
       context: {
-        slug: post.slug,
+        uri: post.uri,
       },
     })
   })

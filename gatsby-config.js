@@ -1,8 +1,4 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
+const config = require("./config")
 
 module.exports = {
   /* Your site config here */
@@ -22,7 +18,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        url: process.env.WPGRAPHQL_URL || `http://gatsbystarter.wst/graphql`,
+        url: `${config.wordPressUrl}/graphql`,
         verbose: true,
         schema: {
           queryDepth: 5,
