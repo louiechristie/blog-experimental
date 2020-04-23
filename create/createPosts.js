@@ -38,6 +38,6 @@ module.exports = async ({ actions, graphql }) => {
     pathPrefix: "/",
     component: blogTemplate,
     items: posts,
-    itemsPerPage: 2,
+    itemsPerPage: 13,
   })
 }
