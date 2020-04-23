@@ -19,8 +19,8 @@ const {
 export default {
   ...tailwind.colors,
 
-  primary: teal[6],
-  secondary: purple[7],
+  primary: "#0e11b5",
+  secondary: "#0e64b5",
   background: gray[1],
   accent: pink[6],
   beige: beige,

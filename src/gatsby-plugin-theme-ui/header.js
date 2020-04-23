@@ -1,6 +1,5 @@
 export default {
   backgroundColor: `white`,
-  // variant: `gradients.primary`,
   color: "white",
   fontWeight: "bold",
   margin: `none`,
@@ -13,13 +12,5 @@ export default {
     maxWidth: "container",
     py: 6,
     width: "90vw",
-  },
-  ".headroom--pinned &": {
-    ">div": {
-      py: 3,
-    },
-    h1: {
-      fontSize: 3,
-    },
   },
 }

@@ -1,10 +1,8 @@
 export default {
   primary: {
-    backgroundImage: t =>
-      `linear-gradient(60deg, ${t.colors.red[5]}, ${t.colors.purple[6]})`,
+    backgroundImage: t => `linear-gradient(60deg, #0e11b5, #0e11b5)`,
   },
   secondary: {
-    backgroundImage: t =>
-      `linear-gradient(60deg, ${t.colors.secondary}, ${t.colors.teal[4]})`,
+    backgroundImage: t => `linear-gradient(60deg, #0e64b5, #0e64b5)`,
   },
 }

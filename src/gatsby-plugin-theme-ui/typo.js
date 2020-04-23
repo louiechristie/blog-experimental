@@ -1,6 +1,6 @@
 export const fonts = {
-  body: "IBM Plex Mono, monospace",
-  heading: "Roboto Slab",
+  body: "Helvetica",
+  heading: "Helvetica",
 }
 const transition = {
   transition: "all .4s ease-in-out",
