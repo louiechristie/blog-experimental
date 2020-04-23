@@ -1,4 +1,7 @@
 const config = require("./config")
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   /* Your site config here */
@@ -18,7 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        url: `${config.wordPressUrl}/graphql`,
+        url: `${process.env.WORDPRESS_URL}/graphql`,
         verbose: true,
         schema: {
           queryDepth: 5,
