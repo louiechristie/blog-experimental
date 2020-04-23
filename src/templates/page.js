@@ -10,7 +10,7 @@ const Page = ({ data }) => {
     <Layout>
       <SEO title={title} />
 
-      <Container>
+      <Container className="content">
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: content }}></div>
       </Container>
