@@ -4,6 +4,11 @@ require("dotenv").config({
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `Creative Tech Blog | Louie Christie`,
+    siteUrl: `https://www.louiechristie.com/blog`,
+    description: `Creative Tech blog and associated rantings of Louie Christie`,
+  },
   plugins: [
     `gatsby-plugin-notifications`,
     `gatsby-plugin-sharp`,

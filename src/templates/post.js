@@ -2,6 +2,7 @@
 import { jsx, Container, Box } from "theme-ui"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 import BgImage from "../components/BgImage"
 
 const SinglePOST = ({ data }) => {
@@ -9,6 +10,8 @@ const SinglePOST = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={title} />
+
       <Container sx={{ maxWidth: `l` }}>
         <BgImage img={featuredImage} height="400px" />
         <Box sx={{ variant: `card.default` }}>

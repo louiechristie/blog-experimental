@@ -1,8 +1,11 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
+  "name": "bab-blog",
+  "description": "Blog using Gatsby.js and WordPress",
+  "version": "0.0.1",
+  "author": { 
+    "name" : "Louie Christie",
+    "url" : "http://www.louiechristie.com/"
+  },
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

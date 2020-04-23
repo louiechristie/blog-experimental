@@ -2,6 +2,7 @@
 import { jsx, Container, Box, Flex } from "theme-ui"
 import Layout from "../components/Layout"
 import { graphql, Link } from "gatsby"
+import SEO from "../components/SEO"
 import Pagination from "../components/Pagination"
 import BgImage from "../components/BgImage"
 
@@ -10,6 +11,8 @@ const Blog = ({ data, pageContext }) => {
   const { pageNumber, hasNextPage, itemsPerPage, allPosts } = pageContext
   return (
     <Layout>
+      <SEO title={"Home"} />
+
       <Container sx={{ maxWidth: `l` }}>
         {data &&
           data.allWpPost &&
