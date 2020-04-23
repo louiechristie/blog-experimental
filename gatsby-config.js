@@ -4,6 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   /* Your site config here */
+  pathPrefix: "louiechristie.github.io/blog/",
   siteMetadata: {
     title: `Creative Tech Blog | Louie Christie`,
     siteUrl: `https://www.louiechristie.com/blog`,
