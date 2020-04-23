@@ -1,6 +1,5 @@
-const config = require("./config")
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env`,
 })
 
 module.exports = {
@@ -21,7 +20,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        url: `${process.env.WORDPRESS_URL}/graphql`,
+        url: `${process.env.GATSBY_WORDPRESS_URL}/graphql`,
         verbose: true,
         schema: {
           queryDepth: 5,
