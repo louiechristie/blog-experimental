@@ -2,9 +2,9 @@
   "name": "bab-blog",
   "description": "Blog using Gatsby.js and WordPress",
   "version": "0.0.1",
-  "author": { 
-    "name" : "Louie Christie",
-    "url" : "http://www.louiechristie.com/"
+  "author": {
+    "name": "Louie Christie",
+    "url": "http://www.louiechristie.com/"
   },
   "license": "MIT",
   "scripts": {
@@ -29,6 +29,7 @@
     "gatsby-awesome-pagination": "^0.3.5",
     "gatsby-background-image": "^1.1.1",
     "gatsby-image": "^2.3.2",
+    "gatsby-plugin-manifest": "^2.3.6",
     "gatsby-plugin-netlify-cache": "^1.2.0",
     "gatsby-plugin-notifications": "^0.0.2",
     "gatsby-plugin-react-helmet": "^3.2.2",

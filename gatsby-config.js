@@ -89,5 +89,17 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify-cache`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Creative Tech Blog`,
+        short_name: `CreativeTechBlog`,
+        start_url: `/`,
+        background_color: `#0e11b5`,
+        theme_color: `#0e11b5`,
+        display: `minimal-ui`,
+        icon: `src/assets/images/icon.svg`,
+      },
+    },
   ],
 }
