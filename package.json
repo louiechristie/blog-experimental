@@ -41,6 +41,7 @@
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-source-wordpress-experimental": "^0.0.31",
     "gatsby-transformer-sharp": "^2.4.4",
+    "gatsby-wordpress-experimental-inline-images": "^0.0.3",
     "node-sass": "^4.13.1",
     "parse-path": "^4.0.1",
     "react": "^16.12.0",

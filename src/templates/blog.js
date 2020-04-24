@@ -33,7 +33,9 @@ const Blog = ({ data, pageContext }) => {
                 </h2>
                 <Box
                   className="content"
-                  dangerouslySetInnerHTML={{ __html: post.excerpt }}
+                  dangerouslySetInnerHTML={{
+                    __html: post.excerpt,
+                  }}
                 />
                 <Flex
                   sx={{

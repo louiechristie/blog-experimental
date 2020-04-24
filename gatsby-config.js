@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   /* Your site config here */
-  pathPrefix: "blog/",
+  pathPrefix: "/blog",
   siteMetadata: {
     title: `Creative Tech Blog | Louie Christie`,
     siteUrl: `https://www.louiechristie.com/blog`,
@@ -100,6 +100,16 @@ module.exports = {
         theme_color: `#0e11b5`,
         display: `minimal-ui`,
         icon: `src/assets/images/icon.svg`,
+      },
+    },
+    {
+      resolve: "gatsby-wordpress-experimental-inline-images",
+      options: {
+        wordPressUrl: `${process.env.GATSBY_WORDPRESS_URL}`,
+        uploadsUrl: `${process.env.GATSBY_WORDPRESS_URL}/wp-content/uploads/`,
+        processPostTypes: ["Page", "Post"],
+        graphqlTypeName: "WPGraphQL",
+        pathPrefix: "/blog",
       },
     },
   ],
